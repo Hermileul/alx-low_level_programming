@@ -1,1 +1,1 @@
-C - Hello, World
+gcc -c -o 1-compiler.o
