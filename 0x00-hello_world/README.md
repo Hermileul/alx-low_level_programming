@@ -1,1 +1,1 @@
-gcc -c -o 1-compiler.o
+6-size.c
