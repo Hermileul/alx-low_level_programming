@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-/* more headers goes here */
+/* more headers goes there */
 
 /* betty style doc for function main goes there */
 /**
@@ -9,20 +9,19 @@
  *
  * Return: Always 0 (success)
  */
+
 int main(void)
 {
 	int n;
 
-	int m;
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
-	m = n % 10;
-	if (m > 5)
-		printf("Last digit of %d is %d greater than 5\n", n, m);
-	if (m == 0)
-		printf("Last digit of %d is %d 0\n", n, m);
-	if (m < 6 && m != 0)
-		printf("Last digit of %d is %d less than 6 and not 0\n", n, m);
+	if (n > 0)
+		printf("%i is postive\n", n);
+	else if (n == 0)
+		printf("%i is zero\n", n);
+	else
+		printf("%i is negative\n", n);
 	return (0);
-}	
+}
