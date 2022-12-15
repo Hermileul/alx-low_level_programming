@@ -1,28 +1,23 @@
 #include "main.h"
 
 /**
- * print_square - print a square
- * @size: size of square
- * Description: can only use_putchar t print. use '#' to print square
+ * print_square - prints square
+ * @size: size param
  */
+
 void print_square(int size)
 {
-	int x, y;
+	int i = 0. j;
 
-	y = 0;
-
-	if (sixe < 1)
-		_putchar('\n');
-
-	while (y < size)
+	if (size > 0)
 	{
-		x = 0;
-		while (x < size)
+		for (; i < size; i++)
 		{
-			_putchar('#');
-			x++;
+			for (j = 0; j < size; j++)
+				_putchar(35);
+			_putchar('\n');
 		}
-		_putchar('\n');
-		y++;
 	}
+	else
+		_putchar('\n');
 }
