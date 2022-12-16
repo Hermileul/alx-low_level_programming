@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main-causes an infinte loop
+ * main - causes on infinte loop
  * Return: 0
  */
 
@@ -9,11 +9,11 @@ int main(void)
 {
 	int i;
 
-	printf("infinte loop incoming :(\n");
+	printf("infinite loop incoming :(\n");
 
 	i = 0;
 
-	/*while(i < 10)*/
+	/*while (i < 10)*/
 	{
 		/*putchar(i);*/
 	}
