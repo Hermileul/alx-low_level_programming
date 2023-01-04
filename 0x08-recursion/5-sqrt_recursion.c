@@ -17,5 +17,5 @@ int comparar(int n, int y)
 		return (-1);
 
 	}
-	return (compare(n, y + 1));
+	return (comparar(n, y + 1));
 }
