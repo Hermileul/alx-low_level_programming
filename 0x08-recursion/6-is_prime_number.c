@@ -7,7 +7,7 @@
  *
  * Return: square root
  */
-int comparar(int n, int y)
+int is_prime_number(int n)
 {
 	int count = 0;
 
