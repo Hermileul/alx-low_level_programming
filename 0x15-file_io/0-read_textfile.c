@@ -1,26 +1,39 @@
 #include "main.h"
+
 /**
- * read_textile - reads a textfile and prints the contents to the POSIX STDOUT
- * @filename: Th name of the file to read form
- * @letters: The number of characters it should print to the STDOUT
- * Return: Returns the number of characters printed
+ * read_textile - Read a text file and print to the POSIX stout
+ * @filename: char string of files name
+ * @letters: number of letters to read and print
+ * Return: number of letters read and printed, or 0 if error
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	ssize_t fild = 0, chk = 0;
+	int fd;
+	ssize_t rcount, wcount;
 	char *buffer;
 
-	if (!filename || !letters)
-		return (0);
-	fild = open(filename, O_RDONLY);
-	if (fild < 0)
+	if (filename == NULL)
 		return (0);
 
-	buffer = malloc(sizeof(char) * (letters));
-	if (!buffer)
+	fd = open(filename, O_RDWR);
+	if (fd == -1)
 		return (0);
 
-	close(fild);
-	free(buffer);
-	return (chik);
+	buffer = malloc(sizeof(char) * letters);
+if (buffer == NULL)
+{
+free(buffer);
+return (0);
 }
+rcount = read(fd, buffer, letters);
+if (rcount == -1)
+	return (0);
+
+	wcount = write(STDOUT_FILENO, buffer, rcount);
+	if (wcount == -1 || rcount != wcount)
+	return (0);
+	free(buffer);
+
+	close(fd);
+	return (wcount);
+	}
